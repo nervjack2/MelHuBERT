@@ -1,0 +1,46 @@
+melhubert:
+  # Input feature dimension should be 80 when the frame period is 20 ms 
+  # (Concatenating every two frames in 40-dim log Mel)
+  feat_emb_dim: 80
+
+  # Positional embedding type
+  pos_emb_type: conv                                  # Options: ["conv"]. The original implementation in HuBERT is "conv".
+  pos_conv_depth: 1
+  conv_pos: 128
+  conv_pos_groups: 16
+
+  # Transformer encoder
+  encoder_layers: 12
+  encoder_embed_dim: 768
+  encoder_ffn_embed_dim: 3072
+  encoder_attention_heads: 12
+  activation_fn: gelu
+  layer_norm_first: False
+  attention_type: original
+  
+  # Output dimension 
+  num_cluster: 512 
+
+  # Criterion 
+  pred_masked_weight: 1.0
+  pred_nomask_weight: 0.0
+
+  skip_masked: False
+  skip_nomask: True
+
+  # Masking config
+  mask_prob: 0.70
+  mask_length: 5
+  mask_selection: 'static'
+  mask_other: 0.0
+  no_mask_overlap: False
+  mask_min_space: 1
+
+  learnable_mask_emb: False
+  mask_before_proj: True
+  
+  # Dropout
+  dropout: 0.1
+  attention_dropout: 0.1
+  activation_dropout: 0.1
+  encoder_layerdrop: 0.0
