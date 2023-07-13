@@ -40,9 +40,12 @@ def extract_fbank(waveform_path, mean, std, fp=20):
         y = torch.cat((odd_y, even_y), dim=1)
     return y
 
-def prepare_data(wav_path, fp=20):
+def prepare_data(wav_path, fp=20, hour=360):
     # Load the mean and std of LibriSpeech 360 hours 
-    mean_std_npy_path = './example/libri-360-mean-std.npy'
+    if hour == 360:
+        mean_std_npy_path = './example/libri-360-mean-std.npy'
+    elif hour == 100:
+        mean_std_npy_path = './example/libri-100-mean-std.npy'
     mean, std = load_mean_std(mean_std_npy_path)
     # Extract fbank feature for model's input
     mel_input = [extract_fbank(p, mean, std, fp) for p in wav_path]
@@ -64,7 +67,7 @@ def main(args):
         './example/1001-134707-0000.flac'
     ]
     print(f'[Extractor] - Extracting feature from these files: {wav_path}')
-    mel_input, mel_len, pad_mask = prepare_data(wav_path, args.fp)
+    mel_input, mel_len, pad_mask = prepare_data(wav_path, args.fp, args.hour)
     # Put data on device 
     mel_input = mel_input.to(
         device=args.device, dtype=torch.float32
@@ -95,6 +98,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--checkpoint', help='Path to model checkpoint')
     parser.add_argument('-f', '--fp', type=int, help='frame period', default=20)
+    parser.add_argument('-h', '--hour', type=int, help='Data amount', default=360, choices=[360, 100])
     parser.add_argument('--device', default='cuda', help='model.to(device)')
     args = parser.parse_args()
     main(args)
