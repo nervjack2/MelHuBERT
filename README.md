@@ -1,5 +1,5 @@
 # MelHuBERT: A simplified HuBERT on Mel spectrogram
-This is the official implementation of https://arxiv.org/abs/2211.09944:
+This is the official implementation of https://arxiv.org/abs/2211.09944
 
 ## Data Preparing
 First, please execute the following command to prepare LibriSpeech 360 horus and paired cluster labels (K-means on log Mel feature)
@@ -20,12 +20,9 @@ python3 train.py -m melhubert -g ./config/config_model.yaml -c ./config/config_r
 -c: Runner config \
 -n: The model checkpoints, log file, and the pre-training config you used will be saved at this directory 
 
-<!-- ## Pretrained Models 
-Please execute the following command to download the pretrained MelHuBERT 
-```
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=10r8tC-KRwHs83OU4-UGYfshZDUsy9erS' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10r8tC-KRwHs83OU4-UGYfshZDUsy9erS" -O melhubert-libri360-20fp.ckpt && rm -rf /tmp/cookies.txt
-``` -->
-
+## Pretrained Models 
+- [MelHuBERT-20ms 360-hour stage 1](https://drive.google.com/file/d/1mSR40Vdl2gT1rlZORleKPb2gcryQHW5m/view?usp=sharing)
+- [MelHuBERT-20ms 360-hour stage 2](https://drive.google.com/file/d/11wzYf8u9pXPvQyQU2Wodx79W31Ka2e0Z/view?usp=sharing)
 ## Extracting feature 
 Please execute the following command to extract feature from two example waveforms
 ```

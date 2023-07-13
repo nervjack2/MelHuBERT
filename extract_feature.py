@@ -56,16 +56,6 @@ def prepare_data(wav_path, fp=20):
 
     return mel_input, mel_len, pad_mask
 
-def load_cluster_label(cluster_path, mel_len, fp=20):
-    cluster = []
-    for p, l in zip(cluster_path, mel_len):
-        c = np.load(p)
-        c_len = c.shape[0]
-        if fp == 20 and c_len != l:
-            c = c[::2]
-        cluster.append(torch.LongTensor(c))
-    cluster = pad_sequence(cluster, batch_first=True, padding_value=-100) 
-    return cluster
 
 def main(args):
     # Preparing example input
