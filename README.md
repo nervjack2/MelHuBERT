@@ -23,6 +23,8 @@ python3 train.py -m melhubert -g ./config/config_model.yaml -c ./config/config_r
 ## Pretrained Models 
 - [MelHuBERT-20ms 360-hour stage 1](https://drive.google.com/file/d/1mSR40Vdl2gT1rlZORleKPb2gcryQHW5m/view?usp=sharing)
 - [MelHuBERT-20ms 360-hour stage 2](https://drive.google.com/file/d/11wzYf8u9pXPvQyQU2Wodx79W31Ka2e0Z/view?usp=sharing)
+- [MelHuBERT-10ms 360-hour stage 1](https://drive.google.com/file/d/1ppz5w5eTGOL81QjYqwxRwFFmq-hqInD6/view?usp=sharing)
+- [MelHuBERT-20ms 100-hour stage 1](https://drive.google.com/file/d/1YZP9nBSRaQ_Z2cFaFLmLkGilEYsEHb2b/view?usp=sharing)
 ## Extracting feature 
 Please execute the following command to extract feature from two example waveforms
 ```
