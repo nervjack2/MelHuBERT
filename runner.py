@@ -13,7 +13,7 @@ import torch
 import torch.nn as nn
 from tensorboardX import SummaryWriter
 from torch.utils.data import DataLoader
-from dataset import MelFeatDataset, LoadFairseqDataset
+from dataset import MelFeatDataset
 from pretrain_expert import MelHuBERTPretrainer 
 
 class Runner():
@@ -47,7 +47,7 @@ class Runner():
 
         return optimizer
 
-    def _get_dataloader(self,):
+    def _get_dataloader(self):
         dataset = MelFeatDataset(
             self.args.frame_period,
             self.runner_config['datarc']
@@ -97,11 +97,9 @@ class Runner():
 
         while pbar.n < pbar.total:
             for data in tqdm(dataloader, dynamic_ncols=True, desc='train'):
-                if self.args.mode in ['melhubert', 'distillation']:
-                    # Save model for every x epochs in MelHuBERT pre-training mode
-                    if (global_step % int(self.save_every_x_epochs * step_per_epoch) == 0) and (backward_steps % gradient_accumulate_steps == 0):
-                        num_epoch = global_step // step_per_epoch
-                        self.melhubert.save_model(optimizer, global_step, num_epoch)
+                if (global_step % int(self.save_every_x_epochs * step_per_epoch) == 0) and (backward_steps % gradient_accumulate_steps == 0):
+                    num_epoch = global_step // step_per_epoch
+                    self.melhubert.save_model(optimizer, global_step, num_epoch)
                
                 # try/except block for forward/backward
                 try:

@@ -75,8 +75,8 @@ class FeatLabelDataset(Dataset):
 
 class MelFeatDataset(FeatLabelDataset):
     
-    def __init__(self, frame_period, task_config, data_config):
-        super(MelFeatDataset, self).__init__(task_config, data_config)
+    def __init__(self, frame_period, data_config):
+        super(MelFeatDataset, self).__init__(data_config)
         self.frame_period = frame_period
 
     def _load_feat(self, feat_path):

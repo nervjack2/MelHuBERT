@@ -7,7 +7,6 @@ import yaml
 import torch
 import torch.nn as nn
 from model import MelHuBERTModel, MelHuBERTConfig
-from pytorch_code import prune
 
 class MelHuBERTPretrainer(nn.Module):
     def __init__(self, args, runner_config, upstream_config, initial_weight=None, device='cuda'):
@@ -29,7 +28,7 @@ class MelHuBERTPretrainer(nn.Module):
     def _init_model(self):
         print('[Pretrainer] - Initializing model...')
         self.model_config = MelHuBERTConfig(self.upstream_config['melhubert'])
-        self.model = MelHuBERTModel(self.model_config, self.multitask)
+        self.model = MelHuBERTModel(self.model_config)
 
         # Do initialization from a checkpoint if needed
         if self.initial_weight:
