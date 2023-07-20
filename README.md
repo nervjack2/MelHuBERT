@@ -1,6 +1,11 @@
 # MelHuBERT: A simplified HuBERT on Mel spectrogram
 This is the official implementation of https://arxiv.org/abs/2211.09944
 
+## Environment 
+```
+pip install -r requirement.txt
+```
+
 ## Data Preparing
 First, please execute the following command to prepare LibriSpeech 360 horus and paired cluster labels (K-means on log Mel feature)
 ```
