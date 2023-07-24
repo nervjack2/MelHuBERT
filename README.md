@@ -18,9 +18,17 @@ The mean and std of LibriSpeech 360 hours is saved at DATA_DIR/mean-std.npy
 
 ## Pre-training MelHuBERT from scratch
 Execute the following command to pretrain MelHuBERT from scratch with default configuration
+
+- 20 ms frame period:
 ```
-python3 train.py -m melhubert -g ./config/config_model.yaml -c ./config/config_runner.yaml -n EXP_DIR_PATH 
+python3 train.py -m melhubert -g ./config/config_model_20ms.yaml -c ./config/config_runner_20ms.yaml -n EXP_DIR_PATH 
 ```
+- 10 ms frame period:
+
+```
+python3 train.py -m melhubert -g ./config/config_model_20ms.yaml -c ./config/config_runner_20ms.yaml -n EXP_DIR_PATH 
+```
+
 -g: Model config \
 -c: Runner config \
 -n: The model checkpoints, log file, and the pre-training config you used will be saved at this directory 

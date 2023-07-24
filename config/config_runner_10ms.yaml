@@ -1,0 +1,24 @@
+runner:
+  #n_epochs: 200
+  n_epochs: 10
+  total_steps: -1
+  gradient_clipping: 10.0
+  gradient_accumulate_steps: 8
+
+  log_step: 10
+  # Save checkpoint for every x epochs (Must specify)
+  save_every_x_epochs: 50
+
+optimizer:
+  lr: 1.e-4
+  betas: [0.9, 0.999]
+  eps: 1.e-8
+  weight_decay: 0
+
+datarc:
+  num_workers: 8
+  train_batch_size: 4
+  max_timestep: -320 # Max length for audio feature (0 for no restriction, negative value to set minimum timestep)
+  sequence_length: 1500 # Randomly sampled lenght for audio feature before forwarding 
+  sets: ['/work/nervjack1027/dataset_home/libri-960-stage-2-10ms-test.csv'] # You can assign multiple data .csv file for pre-training
+    
