@@ -26,7 +26,7 @@ python3 train.py -m melhubert -g ./config/config_model_20ms.yaml -c ./config/con
 - 10 ms frame period:
 
 ```
-python3 train.py -m melhubert -g ./config/config_model_20ms.yaml -c ./config/config_runner_20ms.yaml -n EXP_DIR_PATH 
+python3 train.py -m melhubert -g ./config/config_model_10ms.yaml -c ./config/config_runner_10ms.yaml -n EXP_DIR_PATH 
 ```
 
 -g: Model config \

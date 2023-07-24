@@ -1,6 +1,5 @@
 runner:
-  #n_epochs: 200
-  n_epochs: 10
+  n_epochs: 200
   total_steps: -1
   gradient_clipping: 10.0
   gradient_accumulate_steps: 8
