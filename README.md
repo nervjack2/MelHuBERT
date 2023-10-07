@@ -30,7 +30,7 @@ python3 train.py -f 20 -g ./config/config_model_20ms.yaml -c ./config/config_run
 python3 train.py -f 10 -g ./config/config_model_10ms.yaml -c ./config/config_runner_10ms.yaml -n EXP_DIR_PATH 
 ```
 
--f frame period \
+-f: frame period \
 -g: Model config \
 -c: Runner config \
 -n: The model checkpoints, log file, and the pre-training config you used will be saved at this directory 
