@@ -15,6 +15,7 @@ bash preprocess.sh [DATA_DIR]
 Then, please adjust **datarc.sets** in config_runner.yaml to [ DATA_DIR/libri-360-data-cluster-pair.csv ]
 
 The mean and std of LibriSpeech 360 hours is saved at DATA_DIR/mean-std.npy
+(You won't need it during pre-training, but you might need it when fine-tuning on downstream.)
 
 ## Pre-training MelHuBERT from scratch
 Execute the following command to pretrain MelHuBERT from scratch with default configuration
