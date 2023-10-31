@@ -1,6 +1,8 @@
 """
     Training interface of MelHuBERT.
     Author: Tzu-Quan Lin (https://github.com/nervjack2)
+    Reference: (https://github.com/s3prl/s3prl)
+    Reference author: Shu-wen (Leo) Yang (https://github.com/leo19941227), Andy T. Liu (https://github.com/andi611)
 """
 import yaml
 
