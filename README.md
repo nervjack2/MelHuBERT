@@ -1,5 +1,6 @@
 # MelHuBERT: A simplified HuBERT on Mel spectrogram
-This is the official implementation of https://arxiv.org/abs/2211.09944
+This is the official implementation of ASRU 2023 accepted paper.
+https://arxiv.org/abs/2211.09944
 
 ## Environment 
 ```
