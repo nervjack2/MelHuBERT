@@ -1,8 +1,8 @@
 """
     Training interface of MelHuBERT.
     Author: Tzu-Quan Lin (https://github.com/nervjack2)
-    Reference: (https://github.com/s3prl/s3prl/blob/master/s3prl/run_pretrain.py)
-    Reference author: Andy T. Liu (https://github.com/andi611)
+    Reference: (https://github.com/s3prl/s3prl/blob/master/s3prl/run_downstream.py)
+    Reference author: Shu-wen (Leo) Yang (https://github.com/leo19941227)
 """
 import os
 import yaml
