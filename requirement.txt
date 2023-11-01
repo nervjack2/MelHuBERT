@@ -1,4 +1,3 @@
-certifi @ file:///croot/certifi_1671487769961/work/certifi
 numpy==1.21.6
 packaging==23.1
 pandas==1.3.5
