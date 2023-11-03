@@ -3,6 +3,7 @@ This is the official implementation of ASRU 2023 accepted paper. \
 https://arxiv.org/abs/2211.09944
 
 ## Environment 
+python=3.9
 ```
 pip install -r requirement.txt
 ```
