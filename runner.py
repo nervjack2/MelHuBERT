@@ -41,9 +41,9 @@ class Runner():
             init_optimizer = all_states["Optimizer"]
             try:
                 optimizer.load_state_dict(init_optimizer)
-                print(f'[Runner] Load initilization optimizer weight from {self.args.initial_weight}')
+                print(f'[Runner] Load initialization optimizer weight from {self.args.initial_weight}')
             except:
-                raise NotImplementedError('Could not load the initilization weight of optimizer')
+                raise NotImplementedError('Could not load the initialization weight of optimizer')
 
         return optimizer
 
