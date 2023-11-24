@@ -1,10 +1,9 @@
 # MelHuBERT: A simplified HuBERT on Mel spectrogram
 This is the official implementation of ASRU 2023 accepted paper. 
 
-Paper link:\ 
-https://arxiv.org/abs/2211.09944\ 
-Paper introduction video:\
-https://www.youtube.com/watch?v=S_t2TROKu6o 
+Paper link: https://arxiv.org/abs/2211.09944
+
+Paper introduction video: https://www.youtube.com/watch?v=S_t2TROKu6o 
 
 MelHuBERT, is able to achieve favorable performance on phone
 recognition, speaker identification, and automatic speech
