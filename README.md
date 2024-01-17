@@ -24,9 +24,9 @@ Then, please execute the following command to prepare log Mel feature and paired
 bash preprocess.sh [DATASET_DIR] [OUT_DIR]
 ```
 
-Then, please adjust **datarc.sets** in ./config/config_runner_20ms.yaml and ./config/config_runner_10ms.yaml to [ DATA_DIR/libri-360-data-cluster-pair.csv ]
+Then, please adjust **datarc.sets** in ./config/config_runner_20ms.yaml and ./config/config_runner_10ms.yaml to [ OUT_DIR/libri-360-data-cluster-pair.csv ]
 
-The mean and std of LibriSpeech 360 hours is saved at DATA_DIR/mean-std.npy
+The mean and std of LibriSpeech 360 hours is saved at OUT_DIR/mean-std.npy
 (You won't need it during pre-training, but you might need it when fine-tuning on downstream.)
 
 ## Pre-training MelHuBERT from scratch
