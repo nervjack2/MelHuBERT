@@ -17,7 +17,8 @@ pip install -r requirement.txt
 ```
 
 ## Data Preparing
-First, please download dataset [here](https://drive.usercontent.google.com/download?id=1Z4WU6m5v1Aq8MpzpoYIggBcLD-SQUkr9&export=download&authuser=1), and unzip the dataset. 
+First, please download dataset [here](https://drive.usercontent.google.com/download?id=1Z4WU6m5v1Aq8MpzpoYIggBcLD-SQUkr9&export=download&authuser=1), and unzip the dataset.
+
 Then, please execute the following command to prepare log Mel feature and paired cluster labels (K-means on log Mel feature)
 ```
 bash preprocess.sh [DATASET_DIR] [OUT_DIR]
