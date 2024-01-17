@@ -17,9 +17,10 @@ pip install -r requirement.txt
 ```
 
 ## Data Preparing
-First, please execute the following command to prepare LibriSpeech 360 horus and paired cluster labels (K-means on log Mel feature)
+First, please download dataset [here](https://drive.usercontent.google.com/download?id=1Z4WU6m5v1Aq8MpzpoYIggBcLD-SQUkr9&export=download&authuser=1), and unzip the dataset. 
+Then, please execute the following command to prepare log Mel feature and paired cluster labels (K-means on log Mel feature)
 ```
-bash preprocess.sh [DATA_DIR]
+bash preprocess.sh [DATASET_DIR] [OUT_DIR]
 ```
 
 Then, please adjust **datarc.sets** in ./config/config_runner_20ms.yaml and ./config/config_runner_10ms.yaml to [ DATA_DIR/libri-360-data-cluster-pair.csv ]
