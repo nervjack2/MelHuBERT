@@ -9,6 +9,7 @@ import os
 import torch
 import torch.nn as nn
 from model import MelHuBERTModel, MelHuBERTConfig
+import tqdm
 
 class MelHuBERTPretrainer(nn.Module):
     def __init__(self, args, runner_config, upstream_config, initial_weight=None, device='cuda'):
