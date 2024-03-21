@@ -48,7 +48,7 @@ python3 train.py -f 10 -g ./config/config_model_10ms.yaml -c ./config/config_run
 -n: The model checkpoints, log file, and the pre-training config you used will be saved at this directory 
 
 ## Pretrained Models 
-**Warning: Note that these models are trained with 32 batch size, which is much smaller than fairseq's HuBERT Base. So they could not directly compare to HuBERT Base.**
+**Warning: Due to computational resource limitations, these MelHuBERT models were trained with a batch size of 32. Therefore, they cannot be fairly compared with fairseq's HuBERT Base, which was trained with much larger batch size.**
 - [MelHuBERT-20ms 360-hour stage 1](https://drive.google.com/file/d/1mSR40Vdl2gT1rlZORleKPb2gcryQHW5m/view?usp=sharing)
 - [MelHuBERT-20ms 360-hour stage 2](https://drive.google.com/file/d/11wzYf8u9pXPvQyQU2Wodx79W31Ka2e0Z/view?usp=sharing)
 - [MelHuBERT-10ms 360-hour stage 1](https://drive.google.com/file/d/1YZP9nBSRaQ_Z2cFaFLmLkGilEYsEHb2b/view?usp=sharing)
