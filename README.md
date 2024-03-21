@@ -48,10 +48,14 @@ python3 train.py -f 10 -g ./config/config_model_10ms.yaml -c ./config/config_run
 -n: The model checkpoints, log file, and the pre-training config you used will be saved at this directory 
 
 ## Pretrained Models 
+**Note that these models are trained with 32 batch size, which is much smaller than fairseq's HuBERT Base. So they could not directly compare to HuBERT Base.**
 - [MelHuBERT-20ms 360-hour stage 1](https://drive.google.com/file/d/1mSR40Vdl2gT1rlZORleKPb2gcryQHW5m/view?usp=sharing)
 - [MelHuBERT-20ms 360-hour stage 2](https://drive.google.com/file/d/11wzYf8u9pXPvQyQU2Wodx79W31Ka2e0Z/view?usp=sharing)
 - [MelHuBERT-10ms 360-hour stage 1](https://drive.google.com/file/d/1YZP9nBSRaQ_Z2cFaFLmLkGilEYsEHb2b/view?usp=sharing)
 - [MelHuBERT-20ms 100-hour stage 1](https://drive.google.com/file/d/1ppz5w5eTGOL81QjYqwxRwFFmq-hqInD6/view?usp=sharing)
+- [MelHuBERT-10ms 960-hour stage 2](https://drive.google.com/file/d/18u2u-528uDh5T7R1bp1wvWJ2ygcrNlzx/view?usp=sharing)
+- [MelHuBERT-20ms 960-hour stage 2](https://drive.google.com/file/d/1Fn_C5VoH5iV3LdvBEjvfAsbMPhWFFPdd/view?usp=sharing)
+
 ## Extracting feature 
 Please execute the following command to extract feature from two example waveforms
 ```
